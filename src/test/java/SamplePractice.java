@@ -32,10 +32,5 @@ public class SamplePractice {
         driver.findElement(By.xpath("//*[@id = 'middleName']")).sendKeys("k");
         driver.findElement(By.xpath("//*[@id = 'lastName']")).sendKeys("singhal");
         driver.findElement(By.xpath("//*[text() = 'Save']")).click();
-
-
-
     }
-
-
 }
