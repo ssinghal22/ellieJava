@@ -42,7 +42,7 @@ public class AmazonInterviewChallenge {
         //click each best seller without having the bestseller web elements above going stale
 
          List<WebElement> bestSellers = driver.findElements(By.xpath("//span[text()='Best Seller']/ancestor::div[@class='a-section a-spacing-medium']//img[@class='s-image']/ancestor::a"));
-
+//*[text()='Best Seller']/ancestor::*[@class='a-section a-spacing-base']
          String original_window = driver.getWindowHandle();
 
         for (WebElement item: bestSellers){

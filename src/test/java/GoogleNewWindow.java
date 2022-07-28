@@ -34,12 +34,12 @@ public class GoogleNewWindow {
     public void testGoogleExample() throws InterruptedException {
     driver.findElement(By.xpath("//*[@name='q']")).sendKeys("books" + Keys.ENTER);
 
-    wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='rso']")));
-    List<WebElement> list = driver.findElements(By.xpath("//h2/../div/div/a"));
-            String href = list.get(2).getAttribute("href");
-           String jsScript = "window.open(arguments[0])";
+    wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[@class='yuRUbf']/a")));
+    List<WebElement> list = driver.findElements(By.xpath("//*[@class='yuRUbf']/a"));
+    String href = list.get(2).getAttribute("href");
+    String jsScript = "window.open(arguments[0]);";
 
-           JavascriptExecutor js = (JavascriptExecutor)driver;
-            js.executeScript(jsScript, href);
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript(jsScript, href);
     }
 }

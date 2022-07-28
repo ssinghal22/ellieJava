@@ -55,7 +55,7 @@ public class OpenNewWindow {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript(jsScript, href);
 
-        // below not needed. focus is at second tab from above line.
+        // below needed to switch webdriver to new tab. focus is at second tab from above line.
         String original_window = driver.getWindowHandle();
         Set<String> windows = driver.getWindowHandles();
 
